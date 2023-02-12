@@ -35,9 +35,9 @@ function App() {
     }
 
     fetch(myAPI)
-      .then((res) => res.json())
       .then(handleErrors)
-      .then((res) => console.log(res.data))
+      //.then((res) => { return res.json(); })
+      .then((res) => console.log(`-> ${res.json()}`))
       .catch((err) => console.log(err));
     /*
     fetch(myAPI, {
